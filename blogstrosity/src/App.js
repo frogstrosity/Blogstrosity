@@ -2,7 +2,14 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
+function Header() {
+  return (
+    <div>
+      <h1>blogstrosity</h1>
+    </div>
+  );
+}
+function PlaceholderCrap() {
   return (
     <div className="App">
       <header className="App-header">
@@ -19,6 +26,15 @@ function App() {
           Learn React
         </a>
       </header>
+    </div>
+  );
+}
+
+function App() {
+  return (
+    <div>
+      <Header/>
+      <PlaceholderCrap/>
     </div>
   );
 }
