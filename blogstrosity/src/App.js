@@ -10,44 +10,22 @@ function Header() {
   );
 }
 
-function Posts(props) {
+function Posts({posts}) {
   return (
     <div>
-      {props.posts.map((p) => (
+      {posts.map(p => (
          <Post post={p}/>        
       ))}
     </div>
   );
 }
 
-function Post(props) {
-  let post = props.post;
+function Post({post}) {
   return (
-    <div>
-      <h2>{post.title}</h2>
+    <div className="Post">
+      <h2 className="Post-Title">{post.title}</h2>
       <h3>{post.tagline}</h3>
       <p>{post.text.substring(0, 100).concat('...')}</p>
-    </div>
-  );
-}
-
-function PlaceholderCrap() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>code</code> and save to blog.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
     </div>
   );
 }
@@ -62,7 +40,6 @@ function App() {
     <div>
       <Header/>
       <Posts posts={data}/>
-      <PlaceholderCrap/>
     </div>
   );
 }
