@@ -10,18 +10,17 @@ function Header() {
   );
 }
 
-function Posts(props) {
+function Posts({posts}) {
   return (
     <div>
-      {props.posts.map(p => (
+      {posts.map(p => (
          <Post post={p}/>        
       ))}
     </div>
   );
 }
 
-function Post(props) {
-  let post = props.post;
+function Post({post}) {
   return (
     <div>
       <h2>{post.title}</h2>
