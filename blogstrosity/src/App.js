@@ -13,7 +13,7 @@ function Header() {
 function Posts(props) {
   return (
     <div>
-      {props.posts.map((p) => (
+      {props.posts.map(p => (
          <Post post={p}/>        
       ))}
     </div>
