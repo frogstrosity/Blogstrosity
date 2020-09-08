@@ -10,5 +10,3 @@ function getPosts() {
 module.exports = {
     getPosts: getPosts
   };
-
-

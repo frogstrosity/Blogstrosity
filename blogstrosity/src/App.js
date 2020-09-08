@@ -31,12 +31,12 @@ function Post({post}) {
 }
 
 function App() {
-  const data2 = PostService.getPosts();
+  const data = PostService.getPosts();
 
   return (
     <div>
       <Header/>
-      <Posts posts={data2}/>
+      <Posts posts={data}/>
     </div>
   );
 }
