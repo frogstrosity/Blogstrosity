@@ -12,11 +12,9 @@ function Header() {
 
 function Posts({posts}) {
   return (
+    /* To-Do: try to get spread operator working here so we dont need to deconstruct/pass indevidual props */
     <div className="Posts">
-      {posts.map(p => (
-          //To-Do: try to get spread operator working here so we dont need to deconstruct/pass indevidual props
-         <Post post={p}/>        
-      ))}
+      {posts.map(p => (<Post post={p}/>))}
     </div>
   );
 }
