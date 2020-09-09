@@ -4,7 +4,7 @@ import * as PostService from './Services/PostService';
 
 function Header() {
   return (
-    <div>
+    <div className="Header">
       <h1>blogstrosity</h1>
     </div>
   );
@@ -12,7 +12,7 @@ function Header() {
 
 function Posts({posts}) {
   return (
-    <div>
+    <div className="Posts">
       {posts.map(p => (
          <Post post={p}/>        
       ))}
