@@ -14,6 +14,7 @@ function Posts({posts}) {
   return (
     <div className="Posts">
       {posts.map(p => (
+          //To-Do: try to get spread operator working here so we dont need to deconstruct/pass indevidual props
          <Post post={p}/>        
       ))}
     </div>
