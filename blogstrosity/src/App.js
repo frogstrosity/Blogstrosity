@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import * as PostService from './Services/PostService';
 
@@ -29,8 +29,8 @@ function Post({post}) {
   );
 }
 
-function App() {
-  const data = PostService.getPosts();
+function App(props) {
+  const [data] = useState(PostService.getPosts());
 
   return (
     <div>
