@@ -10,6 +10,14 @@ function Header() {
   );
 }
 
+function Footer() {
+  return (
+    <div className="Footer">
+      <p>2020 GeoTech</p>
+    </div>
+  );
+}
+
 function Posts({posts}) {
   return (
     /* To-Do: try to get spread operator working here so we dont need to deconstruct/pass indevidual props */
@@ -36,6 +44,7 @@ function App(props) {
     <div>
       <Header/>
       <Posts posts={data}/>
+      <Footer/>
     </div>
   );
 }
