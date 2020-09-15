@@ -19,27 +19,32 @@ function Footer() {
 }
 
 function Posts({posts}) {
+  const [activeIndex] = useState(1);
   return (
+    
     /* To-Do: try to get spread operator working here so we dont need to deconstruct/pass indevidual props */
     <div className="Posts">
-      {posts.map(p => (<Post post={p}/>))}
+      {posts.map((p, index) => (<Post post={p} index = {index} expanded = {activeIndex === index}/>))}
     </div>
   );
 }
 
-function Post({post}) {
+function Post({post, index, expanded}) {
+  
   return (
     <div className="Post">
+      <p>{index}</p>
       <h2 className="Post-Title">{post.title}</h2>
       <h3>{post.tagline}</h3>
       <p>{post.text.substring(0, 100).concat('...')}</p>
+      {expanded ? <p>{post.additionalInfo} </p> : null}
     </div>
   );
 }
 
-function App(props) {
+function App() {
   const [data] = useState(PostService.getPosts());
-
+   
   return (
     <div>
       <Header/>
