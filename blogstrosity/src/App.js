@@ -6,7 +6,7 @@ function App() {
   const [data] = useState(PostService.getPosts());
    
   return (
-    <div>
+    <div className="Container">
       <Header/>
       <Posts posts={data}/>
       <Footer/>
