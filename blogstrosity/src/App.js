@@ -46,25 +46,14 @@ function Posts({posts}) {
 function Post({post, index, expanded, setActiveIndex}) { 
   return (
     <div className="Post">
-      <p>{index}</p>
       <h2 className="Post-Title">{post.title}</h2>
       <h3>{post.tagline}</h3>
       <p>{post.text.substring(0, 100).concat('...')}</p>
-
       { 
         expanded ? 
         <p>{post.additionalInfo} </p> : 
         <button onClick={() => setActiveIndex(index)}>Read More...</button>
       }
-    </div>
-  );
-}
-
-
-function Footer() {
-  return (
-    <div className="Footer">
-      <p>2020 GeoTech</p>
     </div>
   );
 }
