@@ -33,6 +33,17 @@
 
 }
 
+.Footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50px;    
+}
+
+.Footer p {
+  text-align : right;
+}
+
 .Post {
   padding: 10px;
 }
