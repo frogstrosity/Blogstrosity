@@ -56,6 +56,7 @@ function Post({post, index, expanded, setActiveIndex}) {
   );
 }
 
+
 function PostContent({post, index, setActiveIndex}) {
   return (
     <div>
