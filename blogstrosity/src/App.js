@@ -42,18 +42,34 @@ function Posts({posts}) {
   );
 }
 
-
 function Post({post, index, expanded, setActiveIndex}) { 
   return (
     <div className="Post">
       <h2 className="Post-Title">{post.title}</h2>
       <h3>{post.tagline}</h3>
-      <p>{post.text.substring(0, 100).concat('...')}</p>
       { 
         expanded ? 
-        <p>{post.additionalInfo} </p> : 
-        <button onClick={() => setActiveIndex(index)}>Read More...</button>
+        <PostPreview post = {post}/> : 
+        <PostContent post = {post} index = {index} setActiveIndex = {setActiveIndex}/>
       }
+    </div>
+  );
+}
+
+function PostContent({post, index, setActiveIndex}) {
+  return (
+    <div>
+      <p>{post.text.substring(0, 100).concat('...')}</p>
+      <button onClick={() => setActiveIndex(index)}>Read More...</button>
+    </div>
+  );
+}
+
+function PostPreview({post}) {
+  return (
+    <div>
+      <p>{post.text}</p>
+      <p>{post.additionalInfo} </p>
     </div>
   );
 }
