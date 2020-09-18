@@ -47,6 +47,7 @@
 }
 
 .Post h2, h3, p {
+  padding: 10px;
   text-align: center;
 }
 
@@ -54,4 +55,3 @@
   margin:auto;
   display:block;
 }
-
